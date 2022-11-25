@@ -1,0 +1,15 @@
+package com.cos.blog.test;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController	// com.cos.blog밑의 패키지를 검색
+						// 특정 어노테이션이 붙어있는 클래스 파일들을 new 해서 (IoC) 스프링 컨테이너에 관리해줌
+public class BlogControllerTeset {
+	
+	// http://loalhost:8080/test/hello
+	@GetMapping("/test/hello")
+	public String hello() {
+		return "<h1>hello Spring Boot</h1>";
+	}
+}
